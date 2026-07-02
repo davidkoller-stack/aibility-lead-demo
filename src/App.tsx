@@ -391,19 +391,32 @@ function PublisherPage() {
                 <span className="block text-xs uppercase tracking-[0.18em] text-stone-500">fantasy · gaming · lore · popkultura</span>
               </span>
             </a>
-            <nav className="flex flex-wrap gap-x-4 gap-y-2 border-t border-stone-200 pt-3 text-sm font-black text-stone-700 lg:border-t-0 lg:pt-0" aria-label="Navigace magazínu">
-              <a href="#/" className="text-[#b22b2b] hover:text-ink">Zprávy</a>
-              <a href="#/" className="hover:text-ink">Seriály</a>
-              <a href="#/" className="hover:text-ink">Fantasy</a>
-              <a href="#/" className="hover:text-ink">Gaming</a>
-              <a href="#/" className="hover:text-ink">Teorie</a>
-              <a href="#/" className="hover:text-ink">Newsletter</a>
-            </nav>
+            <div className="flex flex-col gap-3 border-t border-stone-200 pt-3 lg:items-end lg:border-t-0 lg:pt-0">
+              <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm font-black text-stone-700" aria-label="Navigace magazínu">
+                <a href="#/" className="text-[#b22b2b] hover:text-ink">Zprávy</a>
+                <a href="#/" className="hover:text-ink">Seriály</a>
+                <a href="#/" className="hover:text-ink">Fantasy</a>
+                <a href="#/" className="hover:text-ink">Gaming</a>
+                <a href="#/" className="hover:text-ink">Teorie</a>
+                <a href="#/" className="hover:text-ink">Newsletter</a>
+              </nav>
+              <a
+                href={campaignPath}
+                className="inline-flex w-fit items-center gap-2 rounded border border-stone-300 bg-[#faf8f4] px-3 py-1.5 text-xs font-black text-stone-700 transition hover:border-[#b22b2b] hover:text-[#b22b2b]"
+              >
+                Spustit demo funnel
+                <ArrowRight className="size-3.5" aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </div>
       </header>
 
       <div className="mx-auto max-w-[1010px] px-4 py-5 sm:px-6 lg:px-8">
+        <div className="mb-3 rounded border border-stone-300 bg-white/75 px-3 py-2 text-xs font-semibold leading-5 text-stone-600 shadow-sm sm:inline-flex sm:items-center">
+          <span className="mr-1 font-black uppercase tracking-[0.12em] text-[#b22b2b]">Demo tip:</span>
+          <span>Začněte kliknutím na reklamní banner a projděte si, kam by reklama uživatele dovedla.</span>
+        </div>
         <CampaignAd variant="billboard" />
       </div>
 
