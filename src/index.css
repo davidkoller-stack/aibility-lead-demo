@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Georgia", ui-serif, serif;
+  --color-ember: #d8944f;
+  --color-ash: #111317;
+  --color-ink: #171717;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(216, 148, 79, 0.14), transparent 34rem),
+    linear-gradient(135deg, #090a0d 0%, #161819 44%, #1f1b17 100%);
+  color: #f6f0e8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(216, 148, 79, 0.85);
+  outline-offset: 3px;
+}
+
+.article-copy p {
+  color: #413a34;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.article-copy h2 {
+  color: #181410;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  line-height: 1.15;
+  font-weight: 780;
+  margin-bottom: 0.85rem;
+}
+
+.soft-enter {
+  animation: soft-enter 360ms ease-out both;
+}
+
+@keyframes soft-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
